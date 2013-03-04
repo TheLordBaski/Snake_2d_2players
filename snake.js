@@ -27,7 +27,7 @@ it freely, subject to the following restrictions:
 
 */
 //Premenné
-var direction = 'vpravo', speed = 100, ticker = null, fruitCell = [], score = 0, size = 60;
+var direction = 'vpravo', speed = 100, ticker = null, fruitCell = [], score = 0, size = 55;
 
 var snakeCells = [
 	[ 10, 14 ],
@@ -103,7 +103,7 @@ function updateSnakeCell(){
 				renderFruitCell();
 				score += 100;
 				$( '#scoreBoard' ).html( 'Skóre : ' + score );
-				speed = speed - 10 > 5 ? speed - 10 : speed;
+				speed = speed - 10 > 5 ? speed - 3 : speed;
 				clearInterval( ticker );
 				startGame();
 			}
